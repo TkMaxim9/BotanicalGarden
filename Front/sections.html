@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sections</title>
+    <link rel="stylesheet" href="styles-sections.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ботанический сад</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./sections.html">Секции</a></li>
+                <li><a href="./plants.html">Растения</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" id="logout">Выйти из аккаунта</button>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Секции</h2>
+            <form class="addSectionForm" id="addSectionForm" action="">
+                <label for="sectionName">Введите название</label>
+                <input id="sectionName" type="text" required>
+                <button>Добавить</button>
+            </form>
+            <div class="sectionsList" id="sectionsList">
+
+            </div>
+        </div>
+    </main>
+    <script src="script-sections.js"></script>
+</body>
+</html>

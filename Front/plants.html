@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+    <link rel="stylesheet" href="styles-plants.css">
+</head>
+<body>
+    <header>
+        <h1>Ботанический сад</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./sections.html">Секции</a></li>
+                <li><a href="./plants.html">Растения</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" id="logout">Выйти из аккаунта</button>
+        <p id="error"></p>
+    </header>
+    <main>
+        <h2>Растения</h2>
+        <div class="container">
+            <form class="addPlantForm" id="addPlantForm" action="">
+                <label for="PlantName">Введите название</label>
+                <input id="PlantName" type="text" name="Name" required>
+                <label for="PlantFamily">Введите семойство</label>
+                <input id="PlantFamily" type="text" name="Family" required>
+                <label for="PlantOrigin">Введите происхождение</label>
+                <input id="PlantOrigin" type="text" name="Origin" required>
+                <label for="PlantDesc">Введите описание</label>
+                <input id="PlantDesc" type="text" name="Description" required>
+                <button id="addPlant">Добавить</button>
+            </form>
+            <ul class="plantsList" id="plantsList">
+
+            </ul>
+        </div>
+    </main>
+<script src="script-plants.js"></script>
+</body>
+</html>

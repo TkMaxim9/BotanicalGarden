@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="reg-loginStyles.css">
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Имя пользователя" required>
+        <input type="password" id="registerPassword" placeholder="Пароль" required>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+<a href="/login.html">Войти</a>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const username = document.getElementById('registerUsername').value;
+    const password = document.getElementById('registerPassword').value;
+
+    const response = await fetch('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+
+    if (response.ok) {
+      alert('Регистрация успешна!');
+      window.location.href = '/login.html'; // Перенаправление на страницу входа после успешной регистрации
+    } else {
+      const message = await response.text();
+      alert(message);
+    }
+  });
+</script>
+</body>
+</html>

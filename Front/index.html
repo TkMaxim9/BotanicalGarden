@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Botanical Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ботанический сад</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./sections.html">Секции</a></li>
+                <li><a href="./plants.html">Растения</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" id="logout">Выйти из аккаунта</button>
+    </header>
+    <main>
+        <div class="search-block">
+            <form id="searchForm">
+                <label for="searchText"></label>
+                <input type="text" id="searchText" required>
+                <button type="submit">Поиск</button>
+            </form>
+            <button id="cancelSearchButton">Отмена</button>
+            <div id="searchedItems">
+
+            </div>
+        </div>
+            <div class="container">
+                <form class="addForm" id="addForm" method="post" action="http://localhost:3000/api/plantsections">
+                    <label for="plantName">Выберите растение</label>
+                    <select id="plantName" name="PlantID" value="1" required></select>
+                    <label for="sectionName">Выберите секцию</label>
+                    <select id="sectionName" name="SectionID" value="1" required></select>
+                    <label for="datePlanted">Введите дату посадки</label>
+                    <input id="datePlanted" type="date" name="DatePlanted" value="1" required>
+                    <button type="submit">Добавить</button>
+                </form>
+                <div class="plants-list" id="plants-list">
+
+                </div>
+                <div class="details" id="plant-details">
+                    <p class="selectText">Выберите растение для просмора данных...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
